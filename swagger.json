@@ -1,14 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Users Api",
-    "description": "Users Api",
+    "title": "Library API",
+    "description": "API for managing Books and Authors collections",
     "version": "1.0.0"
   },
-  "host": "w03-project2-a66l.onrender.com",
+  "host": "https://w03-project2-a66l.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -92,6 +92,15 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -280,6 +289,15 @@
           "201": {
             "description": "Created"
           },
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -405,6 +423,92 @@
           "500": {
             "description": "Internal Server Error"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Book": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "The Great Gatsby"
+        },
+        "author": {
+          "type": "string",
+          "example": "F. Scott Fitzgerald"
+        },
+        "genre": {
+          "type": "string",
+          "example": "Classic"
+        },
+        "publishedYear": {
+          "type": "number",
+          "example": 1925
+        },
+        "isbn": {
+          "type": "string",
+          "example": "9780743273565"
+        },
+        "pages": {
+          "type": "number",
+          "example": 180
+        },
+        "available": {
+          "type": "boolean",
+          "example": true
+        },
+        "rating": {
+          "type": "number",
+          "example": 4.8
+        }
+      }
+    },
+    "Author": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "George"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "Orwell"
+        },
+        "birthYear": {
+          "type": "number",
+          "example": 1903
+        },
+        "nationality": {
+          "type": "string",
+          "example": "British"
+        },
+        "genres": {
+          "type": "array",
+          "example": [
+            "Dystopian",
+            "Political Fiction"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "active": {
+          "type": "boolean",
+          "example": false
+        },
+        "rating": {
+          "type": "number",
+          "example": 5
+        },
+        "booksWritten": {
+          "type": "number",
+          "example": 9
+        },
+        "bio": {
+          "type": "string",
+          "example": "George Orwell was an English novelist and critic..."
         }
       }
     }
