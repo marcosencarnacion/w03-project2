@@ -5,7 +5,7 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "w03-project2-a66l.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
