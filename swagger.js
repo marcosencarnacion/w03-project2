@@ -5,7 +5,7 @@ const doc = {
     title: 'Library API',
     description: 'API for managing Books and Authors collections'
   },
-  host: 'https://w03-project2-a66l.onrender.com',
+  host: 'w03-project2-a66l.onrender.com',
   schemes: ['https'],
 
   // ============================
