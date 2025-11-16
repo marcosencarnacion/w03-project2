@@ -1,0 +1,51 @@
+### GET all authors
+GET http://localhost:3000/authors
+Content-Type: application/json
+
+### GET author by ID
+GET http://localhost:3000/authors/69194b49ec15bb16e2b59c94
+Content-Type: application/json
+
+### CREATE a new author (POST)
+POST http://localhost:3000/authors
+Content-Type: application/json
+
+{
+  "firstName": "Gabriel",
+  "lastName": "García Márquez",
+  "birthYear": 1927,
+  "nationality": "Colombian",
+  "genres": ["Magic Realism", "Novel", "Short Story"],
+  "active": false,
+  "rating": 4.9,
+  "booksWritten": [
+    "One Hundred Years of Solitude",
+    "Love in the Time of Cholera",
+    "Chronicle of a Death Foretold"
+  ],
+  "bio": "Gabriel García Márquez was a Colombian novelist, journalist, and Nobel Prize winner known for popularizing magical realism."
+}
+
+### UPDATE an author (PUT)
+PUT http://localhost:3000/authors/69194c0a420cbce36ca98d3e
+Content-Type: application/json
+
+{
+  "firstName": "Gabriel",
+  "lastName": "García Márquez",
+  "birthYear": 1927,
+  "nationality": "Colombian",
+  "genres": ["Magic Realism", "Novel", "Short Story"],
+  "active": false,
+  "rating": 4.9,
+  "booksWritten": [
+    "One Hundred Years of Solitude",
+    "Love in the Time of Cholera",
+    "Chronicle of a Death Foretold"
+  ],
+  "bio": "Gabriel García Márquez was a Colombian novelist, journalist, and Nobel Prize winner known for popularizing magical realism."
+}
+
+### DELETE an author
+DELETE http://localhost:3000/authors/69194c0a420cbce36ca98d3e
+Content-Type: application/json
