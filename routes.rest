@@ -33,7 +33,7 @@ Content-Type: application/json
   "author": "God and Multiple Authors",
   "genre": "Religious Scripture",
   "publishedYear": 1830,
-  "isbn": "9781592975034",
+  "isbn": 9781592975034,
   "pages": 531,
   "available": true,
   "rating": 5.0
